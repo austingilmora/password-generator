@@ -4,6 +4,32 @@
 // Get references to the #generate element
 var generateBtn = document.querySelector("#generate");
 
+//Ask what they want in their password
+var confirmLower = window.confirm(
+  "Would you like your password to contain lowercase letters?"
+);
+
+var confirmUpper =  window.confirm(
+  "Would you like your password to contain uppercase letters?"
+);
+
+var confirmSymbol =  window.confirm(
+  "Would you like your password to contain symbols?"
+);
+
+var confirmNumber =  window.confirm(
+  "Would you like your password to contain numbers?"
+);
+
+//How long is the password no answer not an option
+
+var passLength = function() {
+  lengthSelection = window.prompt("How long do you want your password?");
+  return lengthSelection;
+}
+
+
+// Add choices to the function
 
 
 var randomLowerCase = function() {  
@@ -11,309 +37,352 @@ var randomLowerCase = function() {
 
   switch (letter) {
     case 1:
-      console.log("a")
+      return("a")
       break;
       case 2:
-      console.log("b")
+      return("b")
       break;
       case 3:
-      console.log("c")
+      return("c")
       break;
       case 4:
-      console.log("d")
+      return("d")
       break;
       case 5:
-      console.log("e")
+      return("e")
       break;
       case 6:
-      console.log("f")
+      return("f")
       break;
       case 7:
-      console.log("g")
+      return("g")
       break;
       case 8:
-      console.log("h")
+      return("h")
       break;
       case 9:
-      console.log("i")
+      return("i")
       break;
       case 10:
-      console.log("j")
+      return("j")
       break;
       case 11:
-      console.log("k")
+      return("k")
       break;
       case 12:
-      console.log("l")
+      return("l")
       break;
       case 13:
-      console.log("m")
+      return("m")
       break;
       case 14:
-      console.log("n")
+      return("n")
       break;
       case 15:
-      console.log("o")
+      return("o")
       break;
       case 16:
-      console.log("p")
+      return("p")
       break;
       case 17:
-      console.log("q")
+      return("q")
       break;
       case 18:
-      console.log("r")
+      return("r")
       break;
       case 19:
-      console.log("s")
+      return("s")
       break;
       case 20:
-      console.log("t")
+      return("t")
       break;
       case 21:
-      console.log("u")
+      return("u")
       break;
       case 22:
-      console.log("v")
+      return("v")
       break;
       case 23:
-      console.log("w")
+      return("w")
       break;
       case 24:
-      console.log("x")
+      return("x")
       break;
       case 25:
-      console.log("y")
+      return("y")
       break;
       case 26:
-      console.log("z")
+      return("z")
       break;
   }
   return;
 }
-console.log(randomLowerCase());
+
 
 var randomUpperCase = function() {  
   var letter = Math.floor((Math.random() * 26) + 1)
 
   switch (letter) {
     case 1:
-      console.log("A")
+      return("A")
       break;
       case 2:
-      console.log("B")
+      return("B")
       break;
       case 3:
-      console.log("C")
+      return("C")
       break;
       case 4:
-      console.log("D")
+      return("D")
       break;
       case 5:
-      console.log("E")
+      return("E")
       break;
       case 6:
-      console.log("F")
+      return("F")
       break;
       case 7:
-      console.log("G")
+      return("G")
       break;
       case 8:
-      console.log("H")
+      return("H")
       break;
       case 9:
-      console.log("I")
+      return("I")
       break;
       case 10:
-      console.log("J")
+      return("J")
       break;
       case 11:
-      console.log("K")
+      return("K")
       break;
       case 12:
-      console.log("L")
+      return("L")
       break;
       case 13:
-      console.log("M")
+      return("M")
       break;
       case 14:
-      console.log("N")
+      return("N")
       break;
       case 15:
-      console.log("O")
+      return("O")
       break;
       case 16:
-      console.log("P")
+      return("P")
       break;
       case 17:
-      console.log("Q")
+      return("Q")
       break;
       case 18:
-      console.log("R")
+      return("R")
       break;
       case 19:
-      console.log("S")
+      return("S")
       break;
       case 20:
-      console.log("T")
+      return("T")
       break;
       case 21:
-      console.log("U")
+      return("U")
       break;
       case 22:
-      console.log("V")
+      return("V")
       break;
       case 23:
-      console.log("W")
+      return("W")
       break;
       case 24:
-      console.log("X")
+      return("X")
       break;
       case 25:
-      console.log("Y")
+      return("Y")
       break;
       case 26:
-      console.log("Z")
+      return("Z")
       break;
   }
   return;
 }
-console.log(randomUpperCase())
+
 
 var randomNumber = function() {
   var number = Math.floor((Math.random() * 10) + 1)
 
   switch (number) {
     case 1:
-      console.log("1")
+      return("1")
       break;
     case 2:
-      console.log("2")
+      return("2")
       break;
     case 3:
-      console.log("3")
+      return("3")
       break;
     case 4:
-      console.log("4")
+      return("4")
       break;
     case 5:
-      console.log("5")
+      return("5")
       break;
     case 6:
-      console.log("6")
+      return("6")
       break;
     case 7:
-      console.log("7")
+      return("7")
       break;
     case 8:
-      console.log("8")
+      return("8")
       break;
     case 9:
-      console.log("9")
+      return("9")
       break;
     case 10:
-      console.log("0")
+      return("0")
       break; 
   }
   return;
 }
-console.log(randomNumber());
+
 
 var randomSymbol = function() {  
   var number = Math.floor((Math.random() * 29) + 1)
 
   switch (number) {
     case 1:
-      console.log("!");
+      return("!");
       break;
     case 2:
-      console.log("~");
+      return("~");
       break;
     case 3:
-      console.log("#");
+      return("#");
       break;
     case 4:
-      console.log("$");
+      return("$");
       break;
     case 5:
-      console.log("%");
+      return("%");
       break;
     case 6:
-      console.log("&");
+      return("&");
       break;
     case 7:
-      console.log("'");
+      return("'");
       break;
     case 8:
-      console.log("(");
+      return("(");
       break;
     case 9:
-      console.log(")");
+      return(")");
       break;
     case 10:
-      console.log("*");
+      return("*");
       break;
     case 11:
-      console.log("+");
+      return("+");
       break;
     case 12:
-      console.log(",");
+      return(",");
       break;
     case 13:
-      console.log("-");
+      return("-");
       break;
     case 14:
-      console.log(".");
+      return(".");
       break;
     case 15:
-      console.log("/");
+      return("/");
       break;
     case 16:
-      console.log(":");
+      return(":");
       break;
     case 17:
-      console.log(";");
+      return(";");
       break;
     case 18:
-      console.log("<");
+      return("<");
       break;
     case 19:
-      console.log("=");
+      return("=");
       break;
     case 20:
-      console.log(">");
+      return(">");
       break;
     case 21:
-      console.log("?");
+      return("?");
       break;
     case 22:
-      console.log("@");
+      return("@");
       break;
     case 23:
-      console.log("[");
+      return("[");
       break;
     case 24:
-      console.log("}");
+      return("}");
       break;
     case 25:
-      console.log("]");
+      return("]");
       break;
     case 26:
-      console.log("^");
+      return("^");
       break;
     case 27:
-      console.log("_");
+      return("_");
       break;
     case 28:
-      console.log("{");
+      return("{");
       break;
     case 29:
-      console.log("|");
+      return("|");
       break;
   }
   return;
 }
-console.log(randomSymbol());
+
+var makePassword = function(){
+  var lengthSelection = passLength();
+  var pass = "";
+  for (var i = 0; i < lengthSelection; i++) {
+    //create an array with the random pieces they want in their password
+    
+    var choices = [
+    ]
+
+    if (confirmLower === true) {
+      choices.push(randomLowerCase());
+    }
+
+    if (confirmUpper === true) {
+      choices.push(randomUpperCase());
+    }
+
+    if (confirmSymbol === true) {
+      choices.push(randomSymbol());
+    }
+
+    if (confirmNumber ===true) {
+      choices.push(randomNumber());
+    }
+    //choose a random number between 1-choices.length
+  
+    var p = Math.floor(Math.random()) * choices.length;
+    var picked = choices[p];
+    //choose one of the values in choices
+    pass.concat(' ', picked);
+
+    //add it to the password
+  
+  }
+  
+  return pass;
+}; 
+
+console.log(pass);
+makePassword();
+
+
+
 
 // Write password to the #password input
 function writePassword() {
