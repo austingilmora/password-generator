@@ -24,6 +24,42 @@ function passLength() {
     }
     return chosenLength;
 }
+ 
+function passOptions() {
+ 
+    //How long is the password no answer not an option
+    var chosen = [];
+      //Ask what they want in their password
+    var confirmLower = window.confirm(
+      "Would you like your password to contain lowercase letters?"
+    );
+    if (confirmLower) {
+        chosen = chosen.concat(lowercaseArr);
+    }
+    var confirmUpper =  window.confirm(
+      "Would you like your password to contain uppercase letters?"
+    );
+    if (confirmUpper) {
+        chosen = chosen.concat(uppercaseArr);
+    }
+    var confirmSymbol =  window.confirm(
+      "Would you like your password to contain symbols?"
+    );
+    if (confirmSymbol) {
+        chosen = chosen.concat(symbolArr);
+    }
+    var confirmNumber =  window.confirm(
+      "Would you like your password to contain numbers?"
+    );
+    if (confirmNumber) {
+        chosen = chosen.concat(numberArr);
+    }
+    if (!confirmLower && !confirmUpper && !confirmSymbol && !confirmNumber) {
+        window.alert("You need to select at least one type of character. Please try again.")
+    }
+    return chosen;
+}
+
 
 
 // Write password to the #password input
