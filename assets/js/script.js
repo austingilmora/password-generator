@@ -9,7 +9,9 @@ var numberArr = ["1","2","3","4","5","6","7","8","9","0"];
 
 
 function passLength() {
+    //choose password length
     var chosenLength = window.prompt("How long do you want your password?");
+    //can't be less than 8 or more than 128
     if (parseInt(chosenLength) < 8) {
         window.alert("Your password must be at least 8 characters long. Please try again.");
         return null;
@@ -18,6 +20,7 @@ function passLength() {
         window.alert("Your password can be no longer than 128 characters. Please try again.");
         return null;
     }
+    //can't be not a number
     if (isNaN(parseInt(chosenLength))) {
         window.alert("This is not a number. Please try again");
         return null;
@@ -33,6 +36,7 @@ function passOptions() {
     var confirmLower = window.confirm(
       "Would you like your password to contain lowercase letters?"
     );
+    //add to array
     if (confirmLower) {
         chosen = chosen.concat(lowercaseArr);
     }
@@ -54,6 +58,7 @@ function passOptions() {
     if (confirmNumber) {
         chosen = chosen.concat(numberArr);
     }
+    // can't make no choices
     if (!confirmLower && !confirmUpper && !confirmSymbol && !confirmNumber) {
         window.alert("You need to select at least one type of character. Please try again.")
     }
@@ -61,20 +66,27 @@ function passOptions() {
 }
 
 function generatePassword() {
+    //get the password length
     var chosenLength = passLength();
-    console.log(chosenLength);
+    //if there's a problem with length, stop now
     if (chosenLength === null) {
-        return null
+        return null;
     }
+    //get the array with the choices they made
     var chosen = passOptions();
-    console.log(chosen);
+
+    //empty array to add the randomly selected characters
     var generated = []
  
     for (var i = 0; i < parseInt(chosenLength); i++) {
+        //pick number between 0 and the length of array
         var p = Math.floor(Math.random() * chosen.length);
+        //give the character at that number position
         var picked = chosen[p];
+        // put that character into the array
         generated = generated.concat(picked);
     }
+    //print the array
     return generated.join("");
 }
 
