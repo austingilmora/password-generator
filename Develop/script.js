@@ -60,7 +60,20 @@ function passOptions() {
     return chosen;
 }
 
-
+function generatePassword() {
+    var chosenLength = passLength();
+    console.log(chosenLength);
+    var chosen = passOptions();
+    console.log(chosen);
+    var generated = []
+ 
+    for (var i = 0; i < parseInt(chosenLength); i++) {
+        var p = Math.floor(Math.random() * chosen.length);
+        var picked = chosen[p];
+        generated = generated.concat(picked);
+    }
+    return generated.join("");
+}
 
 // Write password to the #password input
 function writePassword() {
