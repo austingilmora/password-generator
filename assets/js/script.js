@@ -63,6 +63,9 @@ function passOptions() {
 function generatePassword() {
     var chosenLength = passLength();
     console.log(chosenLength);
+    if (chosenLength === null) {
+        return null
+    }
     var chosen = passOptions();
     console.log(chosen);
     var generated = []
