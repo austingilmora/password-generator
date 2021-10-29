@@ -5,7 +5,7 @@
 * Includes the characters that the user chooses (lowercase, uppercase, numeric, and/or special characters) and does not allow for no choices
 * Is displayed in the page after it is generated
 
-![screencapture-austingilmora-github-io-password-generator-2021-10-29-17_07_57](https://user-images.githubusercontent.com/90655310/139501936-041fc548-1fa6-46eb-b188-55f81626ca1b.png)
+![screencapture-austingilmora-github-io-password-generator-2021-10-29-17_10_38](https://user-images.githubusercontent.com/90655310/139502167-d4f0594e-409e-4a73-b75a-e0f34c4cd174.png)
 
 
 ### Enjoy this beautiful app made by a beautiful person
